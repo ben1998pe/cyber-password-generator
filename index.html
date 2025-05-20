@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CyberPasswordGen</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00ffee" />
+  <meta name="description" content="Generador de contraseñas seguras estilo cyberpunk. Hecho con HTML, CSS y JavaScript puro." />
+  <title>CyberPasswordGen ⚡</title>
+
+  <!-- Favicon temporal con ícono de rayo -->
+  <link rel="icon" href="https://fav.farm/⚡" />
+
+  <!-- Fuente estilo consola futurista -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Animación inicial -->
+  <style>
+    body {
+      animation: introFade 1s ease-out;
+    }
+    @keyframes introFade {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="neon-container">
-    <h1>CyberPasswordGen_</h1>
+    
+    <!-- Título animado estilo glitch -->
+    <h1 class="glitch" data-text="CyberPasswordGen_">CyberPasswordGen_</h1>
 
     <div class="terminal-output">
-      <input type="text" id="password" readonly>
+      <input type="text" id="password" readonly />
       <button id="copyBtn">📋</button>
     </div>
 
     <div class="options">
-      <label>🔢 Longitud: <input type="number" id="length" min="4" max="50" value="16"></label>
-      <label><input type="checkbox" id="uppercase" checked> ABC</label>
-      <label><input type="checkbox" id="numbers" checked> 123</label>
-      <label><input type="checkbox" id="symbols" checked> #%$</label>
+      <label>🔢 Longitud: <input type="number" id="length" min="4" max="50" value="16" /></label>
+      <label><input type="checkbox" id="uppercase" checked /> ABC</label>
+      <label><input type="checkbox" id="numbers" checked /> 123</label>
+      <label><input type="checkbox" id="symbols" checked /> #%$</label>
     </div>
 
     <button id="generateBtn">[ GENERAR ]</button>
 
-    <footer>Powered by <span>Vanilla JS</span> 🧠</footer>
+    <footer class="glow-footer">
+      Hecho con 💻 por <strong>ben1998pe</strong><br />
+      <span>Cyberpunk Style • Vanilla JS ⚡</span>
+    </footer>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>

@@ -24,10 +24,40 @@ body {
 h1 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #00ffd5;
-  text-shadow: 0 0 5px #00fff2;
 }
 
+/* Glitch effect */
+.glitch {
+  position: relative;
+  color: #00fff2;
+  text-shadow: 0 0 3px #00fff2, 0 0 6px #00ffe1;
+  animation: flicker 2s infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  top: -2px;
+  color: #f0f;
+  z-index: -1;
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  top: 2px;
+  color: #0ff;
+  z-index: -1;
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+/* Entrada del generador */
 .terminal-output {
   display: flex;
   align-items: center;
@@ -70,7 +100,7 @@ h1 {
 
 #generateBtn {
   background: transparent;
-  border: 2px solid #00ff99;
+  border: 2px solid #00ffee;
   color: #00ffee;
   padding: 0.8rem 1.5rem;
   cursor: pointer;
@@ -84,8 +114,58 @@ h1 {
   color: #000;
 }
 
-footer {
-  margin-top: 1.5rem;
-  font-size: 0.8rem;
-  color: #00ffd5;
+/* Footer brillante */
+.glow-footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #00ffee;
+  text-shadow: 0 0 8px #00ffee, 0 0 12px #00ffee;
+  animation: flicker 3s infinite;
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+/* Glitch keyframes */
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  5% {
+    clip: rect(0, 9999px, 100%, 0);
+  }
+  10% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  15% {
+    clip: rect(10%, 9999px, 90%, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  5% {
+    clip: rect(20%, 9999px, 80%, 0);
+  }
+  10% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  15% {
+    clip: rect(30%, 9999px, 60%, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
 }
