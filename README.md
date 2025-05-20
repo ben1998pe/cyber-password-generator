@@ -21,7 +21,7 @@ Hecho con HTML, CSS y JavaScript puro (Vanilla JS).
 
 ## 📸 Vista previa
 
-(Agrega una captura aquí)
+![Preview del generador](banner-generador.JPG)
 
 ---
 
