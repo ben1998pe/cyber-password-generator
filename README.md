@@ -28,3 +28,8 @@ Hecho con HTML, CSS y JavaScript puro (Vanilla JS).
 ¡Ideal para mejorar seguridad en tus cuentas o probar generadores JS!
 # cyber-password-generator
 Generador de contraseñas seguras con estilo cyberpunk. HTML, CSS y JavaScript puro.
+
+## 🔐 Por qué usar este generador
+
+Este generador es útil para crear contraseñas aleatorias y seguras que puedas copiar rápidamente.  
+Ideal para programadores, diseñadores y usuarios que cuidan su ciberseguridad.
