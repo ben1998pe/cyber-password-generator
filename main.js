@@ -33,3 +33,5 @@ copyBtn.addEventListener("click", () => {
   passwordField.select();
   document.execCommand("copy");
 });
+
+console.log("CyberPasswordGen listo para usar 🚀");
