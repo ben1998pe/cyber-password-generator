@@ -17,6 +17,12 @@ function generatePassword() {
   if (numbersInput.checked) chars += numbers;
   if (symbolsInput.checked) chars += symbols;
 
+  // Excluir caracteres similares si está activado
+  if (document.getElementById("excludeSimilar").checked) {
+    const similar = /[lLI10O]/g;
+    chars = chars.replace(similar, '');
+  }
+
   const length = parseInt(lengthInput.value);
   let password = "";
 
@@ -26,6 +32,7 @@ function generatePassword() {
 
   passwordField.value = password;
 }
+
 
 generateBtn.addEventListener("click", generatePassword);
 
